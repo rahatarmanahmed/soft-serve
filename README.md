@@ -40,7 +40,6 @@ A stupid jQuery plugin for easily making single-service webpages. Here is an exa
 			// use them.
 			// placeholders: {x: "x"}
 		});
-		$("input[name=x]").numeric();
 	</script>
 </body>
 </html>
