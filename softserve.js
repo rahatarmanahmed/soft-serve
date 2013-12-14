@@ -31,11 +31,12 @@
 
 		root.find('.ss-input').on(onEvent, function() {
 			values[this.name] = this.value;
-			for(var k=0; k<names.length; k++)
-				if(values[names[k]] === undefined && !allowUndefined)
-					return;
+			if(this.value === "")
+				values[this.name] = undefined;
 			root.find(".ss-answer").fadeOut(fadeDuration/2, function() {
-				
+				for(var k=0; k<names.length; k++)
+					if(values[names[k]] === undefined && !allowUndefined)
+						return;
 				$(this).html(answer(values)).fadeIn(fadeDuration/2);
 			});
 		});
