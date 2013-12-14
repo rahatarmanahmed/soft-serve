@@ -28,11 +28,6 @@
 
 		var values = {};
 		var names = [];
-		$('.ss-input').each(function() {
-			names.push(this.name);
-			if(placeholders[this.name] !== undefined)
-				$(this).attr('placeholder', placeholders[this.name]);
-		});
 
 		root.find('.ss-input').on(onEvent, function() {
 			values[this.name] = this.value;
@@ -44,6 +39,23 @@
 				$(this).html(answer(values)).fadeIn(fadeDuration/2);
 			});
 		});
+
+		$('.ss-input').each(function() {
+			names.push(this.name);
+			var value = getUrlVar(this.name);
+			if(value !== undefined)
+			{				
+				this.value = value;
+				values[this.name] = value;
+				$(this).trigger(onEvent);
+			}
+			if(placeholders[this.name] !== undefined)
+				$(this).attr('placeholder', placeholders[this.name]);
+		});
 	};
 
+	function getUrlVar(key){
+		var result = new RegExp(key + "=([^&]*)", "i").exec(window.location.search); 
+		return result && decodeURI(result[1]) || undefined; 
+	}
 }(jQuery));

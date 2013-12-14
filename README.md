@@ -40,6 +40,7 @@ A stupid jQuery plugin for easily making single-service webpages. Here is an exa
 			// use them.
 			// placeholders: {x: "x"}
 		});
+		// FUN FACT: It will even grab url parameters when created.
 	</script>
 </body>
 </html>
