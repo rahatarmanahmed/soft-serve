@@ -6,8 +6,6 @@ A stupid jQuery plugin for easily making single-service webpages. Here is an exa
 	<title>Is X Prime?</title>
 	<link rel="stylesheet" href="softserve.css" />
 	<script type="text/javascript" src="jquery-1.10.2.min.js"/></script>
-	<script type="text/javascript" src="jquery.placeholder.js"/></script>
-	<script type="text/javascript" src="jquery.numeric.js"/></script>
 	<script type="text/javascript" src="softserve.js"/></script>
 </head>
 <body>
