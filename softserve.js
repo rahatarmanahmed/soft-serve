@@ -53,6 +53,7 @@
 			if(placeholders[this.name] !== undefined)
 				$(this).attr('placeholder', placeholders[this.name]);
 		});
+		return this;
 	};
 
 	function getUrlVar(key){
